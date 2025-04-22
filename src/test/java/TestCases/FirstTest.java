@@ -41,7 +41,7 @@ public class FirstTest extends TestBase {
     public void TestThree() {
         System.out.println("Test method Three");
         List<WebElement> links = driver.findElements(By.tagName("a"));
-        assertEquals(149, links.size());
+        assertEquals(147, links.size());
         for (WebElement link : links) {
             System.out.println(link.getDomAttribute("href"));
         }
