@@ -2,6 +2,7 @@ package Base;
 import org.openqa.selenium.By;
 //import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 //import org.openqa.selenium.support.ui.FluentWait;
 //import org.openqa.selenium.support.ui.Wait;
@@ -14,11 +15,24 @@ public class TestBase {
 
     public void openBrowser(String URL)
     {
-        driver = new ChromeDriver();
-        driver.get(URL);
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        try {
+            driver = new ChromeDriver();
+            driver.get(URL);
+            driver.manage().window().maximize();
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        } catch (Exception e) {
+        throw new RuntimeException("Failed to initialize WebDriver", e);
+        }
+    }
+    public void waitTillVisibility (WebDriver driver, long timeoutInSeconds, By locator) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).click();
+    }
 
+    public void waitAndClick(WebDriver driver, long timeoutInSeconds, By locator) {
+        // Define explicit wait with timeout
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
+        wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
     }
 
     public void waitForElement(WebDriver driver, long timeoutInSeconds, By locator) {
