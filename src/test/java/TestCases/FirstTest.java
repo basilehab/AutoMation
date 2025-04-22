@@ -2,15 +2,15 @@ package TestCases;
 
 import Base.TestBase;
 import org.openqa.selenium.By;
-//import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-//import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
+import java.util.List;
 import java.util.Objects;
-//import java.util.List;
+import static org.testng.AssertJUnit.assertEquals;
+
 
 public class FirstTest extends TestBase {
     @BeforeMethod
@@ -20,11 +20,14 @@ public class FirstTest extends TestBase {
     }
 
     @Test
-    public void TestOne() throws InterruptedException {
+    public void TestOne()  {
         System.out.println("Test method One");
-        Thread.sleep(2000);
-        String elementText = driver.findElement(By.cssSelector("div.panel-collapse:nth-child(2)")).getText();
-        System.out.println("elementText = " + elementText);
+        // login
+        waitForElement(driver, 10L, By.partialLinkText("login"));
+        WebElement email = driver.findElement(By.name("email"));email.sendKeys("test9090@hotmail.com");
+        WebElement password = driver.findElement(By.name("email"));password.sendKeys("test9090");
+        // Verify logged in
+        Assert.assertTrue(driver.findElement(By.linkText("Logout")).isDisplayed());
     }
     @Test
     public void TestTwo() {
@@ -39,6 +42,7 @@ public class FirstTest extends TestBase {
     public void TestThree() {
         System.out.println("Test method Three");
         List<WebElement> links = driver.findElements(By.tagName("a"));
+        assertEquals(147, links.size());
         for (WebElement link : links) {
             System.out.println(link.getDomAttribute("href"));
         }

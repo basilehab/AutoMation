@@ -21,6 +21,12 @@ public class TestBase {
 
     }
 
+    public void waitForElement(WebDriver driver, long timeoutInSeconds, By locator) {
+        // Define explicit wait with timeout
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
+        wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
+    }
+
     public void closeBrowser()
     {
         driver.quit();
