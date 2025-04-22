@@ -35,6 +35,14 @@ public class FirstTest extends TestBase {
         // Verify we're on login page
         Assert.assertTrue(Objects.requireNonNull(driver.getCurrentUrl()).contains("/login"));
     }
+    @Test
+    public void TestThree() {
+        System.out.println("Test method Three");
+        List<WebElement> links = driver.findElements(By.tagName("a"));
+        for (WebElement link : links) {
+            System.out.println(link.getDomAttribute("href"));
+        }
+    }
 
     @AfterMethod
     public void afterMethod(){
