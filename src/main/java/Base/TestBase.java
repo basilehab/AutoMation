@@ -1,8 +1,9 @@
 package Base;
 import org.openqa.selenium.By;
 //import org.openqa.selenium.ElementNotInteractableException;
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 //import org.openqa.selenium.support.ui.FluentWait;
 //import org.openqa.selenium.support.ui.Wait;
@@ -24,6 +25,16 @@ public class TestBase {
         throw new RuntimeException("Failed to initialize WebDriver", e);
         }
     }
+
+    public void startChromeDriver(String URL) {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--no-sandbox");
+        options.setPageLoadStrategy(PageLoadStrategy.EAGER);
+        options.setAcceptInsecureCerts(true);
+        driver = new ChromeDriver(options);
+        driver.get(URL);
+    }
+
     public void waitTillVisibility (WebDriver driver, long timeoutInSeconds, By locator) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).click();
