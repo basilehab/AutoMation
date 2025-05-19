@@ -35,9 +35,10 @@ public class TestBase {
         driver.get(URL);
     }
 
-    public void waitTillVisibility (WebDriver driver, long timeoutInSeconds, By locator) {
+    public String waitTillVisibility (WebDriver driver, long timeoutInSeconds, By locator) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).getText();
+        return driver.findElement(locator).getText();
     }
 
     public void waitAndClick(WebDriver driver, long timeoutInSeconds, By locator) {

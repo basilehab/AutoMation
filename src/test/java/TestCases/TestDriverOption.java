@@ -31,12 +31,7 @@ public class TestDriverOption extends TestBase {
 
             waitAndClick(driver, 10L, By.cssSelector("button"));
 
-            WebElement message = new WebDriverWait(driver, Duration.ofSeconds(10))
-                    .until(ExpectedConditions.visibilityOfElementLocated(By.id("message")));
-
-            String value = message.getText();
-            assertEquals(value, "Received!");
-
+            assertEquals(waitTillVisibility(driver, 10L, (By.id("message"))), "Received!");
         }
 
     @AfterMethod(alwaysRun = true)
