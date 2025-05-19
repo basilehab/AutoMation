@@ -3,7 +3,6 @@ package TestCases;
 import java.time.Duration;
 import Base.TestBase;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -12,7 +11,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
-public class JunkTest extends TestBase {
+public class TestDriverOption extends TestBase {
 
     @BeforeMethod(alwaysRun = true)
         public void beforeMethod(){
