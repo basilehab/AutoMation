@@ -34,4 +34,20 @@ AutoMationCourse/
 2- Clone the repository:
 
 git clone https://github.com/basilehab/AutoMationCourse.git
+
 cd AutoMationCourse
+
+Resources
+[SHAFT Engine
+](https://github.com/ShaftHQ/SHAFT_ENGINE)
+
+[Selenium Documentation
+](https://www.selenium.dev/documentation/)
+
+[TestNG Documentation
+]([https://www.selenium.dev/documentation/](https://testng.org/doc/
+)
+
+
+Notes
+This project is for learning purposes only. Contributions and feedback are welcome!
