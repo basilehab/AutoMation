@@ -20,15 +20,6 @@ This repository is part of my journey in learning test automation using **Seleni
 - SHAFT Engine
 - IDE: IntelliJ IDEA
 
-## Project Structure
-AutoMationCourse/
-├── src/
-│ └── test/
-│ └── java/
-│ └── testCases/
-│ └── FirstTest.java
-├── pom.xml
-
 ## How to Run the Tests
 1- Make sure Java and Maven are installed.
 2- Clone the repository:
