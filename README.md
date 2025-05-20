@@ -1,0 +1,37 @@
+## AutomationCourse Project
+
+Welcome to my first automation testing project!  
+This repository is part of my journey in learning test automation using **Selenium**, **Java**, **TestNG**, **Maven**, and the **SHAFT Engine**.
+
+## Project Goals
+
+- Practice UI automation with Selenium WebDriver
+- Understand how to structure automated test projects
+- Use TestNG for writing and running tests
+- Learn project management with Maven
+- Apply SHAFT Engine to simplify and enhance test automation
+
+## Tech Stack
+
+- Java (JDK 11+)
+- Selenium WebDriver
+- TestNG
+- Maven
+- SHAFT Engine
+- IDE: IntelliJ IDEA
+
+## Project Structure
+AutoMationCourse/
+├── src/
+│ └── test/
+│ └── java/
+│ └── testCases/
+│ └── FirstTest.java
+├── pom.xml
+
+## How to Run the Tests
+1- Make sure Java and Maven are installed.
+2- Clone the repository:
+
+git clone https://github.com/basilehab/AutoMationCourse.git
+cd AutoMationCourse
