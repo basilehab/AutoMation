@@ -38,6 +38,7 @@ git clone https://github.com/basilehab/AutoMationCourse.git
 cd AutoMationCourse
 
 Resources
+
 [SHAFT Engine
 ](https://github.com/ShaftHQ/SHAFT_ENGINE)
 
@@ -45,8 +46,7 @@ Resources
 ](https://www.selenium.dev/documentation/)
 
 [TestNG Documentation
-]([https://www.selenium.dev/documentation/](https://testng.org/doc/
-)
+](https://testng.org/doc/)
 
 
 Notes
