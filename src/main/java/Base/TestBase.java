@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+//Driver
 public class TestBase {
     public static WebDriver driver;
 
@@ -35,6 +36,20 @@ public class TestBase {
         driver.get(URL);
     }
 
+    public void closeBrowser()
+    {
+        driver.quit();
+    }
+    public void clickWhenReady(WebDriver driver, long timeoutInSeconds, By locator) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
+        wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
+    }
+//Locators
+
+
+
+
+//actions
     public String waitTillVisibility (WebDriver driver, long timeoutInSeconds, By locator) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).getText();
@@ -49,15 +64,6 @@ public class TestBase {
 
     public void waitForElement(WebDriver driver, long timeoutInSeconds, By locator) {
         // Define explicit wait with timeout
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
-        wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
-    }
-
-    public void closeBrowser()
-    {
-        driver.quit();
-    }
-    public void clickWhenReady(WebDriver driver, long timeoutInSeconds, By locator) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
         wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
     }
