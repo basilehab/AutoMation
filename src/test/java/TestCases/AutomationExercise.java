@@ -1,5 +1,5 @@
 package TestCases;
-import Base.TestBase;
+import Base.pages.TheInternetPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import static org.testng.AssertJUnit.assertEquals;
 
 
-public class FirstTest extends TestBase {
+public class AutomationExercise extends TheInternetPage {
     @BeforeMethod (alwaysRun = true)
     public void beforeMethod(){
         openBrowser("https://automationexercise.com/");
@@ -21,10 +21,10 @@ public class FirstTest extends TestBase {
     public void TestOne()  {
         System.out.println("Test method One");
         // login
-        waitAndClick(driver, 10L, By.cssSelector("a[href='/login']"));
+        waitAndClick( 10L, By.cssSelector("a[href='/login']"));
         WebElement email = driver.findElement(By.name("email"));email.sendKeys("test9090@hotmail.com");
         WebElement password = driver.findElement(By.name("password"));password.sendKeys("test9090");
-        waitAndClick(driver, 10L, By.xpath("//*[@id=\"form\"]/div/div/div[1]/div/form/button"));
+        waitAndClick( 10L, By.xpath("//*[@id=\"form\"]/div/div/div[1]/div/form/button"));
         // Verify logged in
         Assert.assertTrue(driver.findElement(By.linkText("Logout")).isDisplayed());
     }
@@ -32,7 +32,7 @@ public class FirstTest extends TestBase {
     public void TestTwo() {
         // Use the explicit wait method to click login
         System.out.println("Test method Two");
-        clickWhenReady(driver, 10L, By.cssSelector("a[href='/login']"));
+        clickWhenReady( 10L, By.cssSelector("a[href='/login']"));
 
         // Verify we're on login page
         Assert.assertTrue(Objects.requireNonNull(driver.getCurrentUrl()).contains("/login"));

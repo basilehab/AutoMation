@@ -3,7 +3,7 @@ package TestCases;
 import com.shaft.driver.SHAFT;
 import org.testng.annotations.*;
 
-public class GoogleTest {
+public class ShaftFirstProject {
     SHAFT.GUI.WebDriver driver;
 
     @BeforeClass
