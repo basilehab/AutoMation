@@ -134,7 +134,7 @@ public void TestcaseFour() {
     System.out.println("Test method Four");
 
     try {
-        Waits.waitForElementClickable(driver, brokenImagesLink);
+        ElementAction.ClickElement(driver, brokenImagesLink);
         List<WebElement> images = driver.findElements(By.tagName("img"));
         System.out.println("Total images: " + images.size());
 

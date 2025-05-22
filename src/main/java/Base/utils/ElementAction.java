@@ -17,5 +17,4 @@ public class ElementAction {
         Scrolling.scrollToElement(driver, locator);
         driver.findElement(locator).click();
     }
-
 }
