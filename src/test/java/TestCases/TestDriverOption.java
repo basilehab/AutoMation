@@ -1,6 +1,6 @@
 package TestCases;
 
-import Base.pages.TheInternetPage;
+import Base.pages.PageBase;
 import Base.utils.Waits;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
-public class TestDriverOption extends TheInternetPage {
+public class TestDriverOption extends PageBase {
 
     @BeforeMethod(alwaysRun = true)
         public void beforeMethod(){

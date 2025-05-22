@@ -41,6 +41,13 @@
             <version>9.2.20250409</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-maven -->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-maven</artifactId>
+            <version>2.15.2</version>
+        </dependency>
+
         <!-- SLF4J API (included transitively by log back-classic, but explicit for clarity) -->
         <dependency>
             <groupId>org.slf4j</groupId>

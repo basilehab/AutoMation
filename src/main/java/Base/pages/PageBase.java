@@ -1,25 +1,19 @@
 package Base.pages;
 import org.openqa.selenium.By;
-//import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-//import org.openqa.selenium.support.ui.FluentWait;
-//import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 //Driver
-public class TheInternetPage {
+public class PageBase {
     public WebDriver driver;
 
     public void openBrowser(String URL) {
         try {
             ChromeOptions options = new ChromeOptions();
-            //options.addArguments("--headless");
+            options.addArguments("--headless");
             options.setPageLoadStrategy(PageLoadStrategy.EAGER);
             options.setAcceptInsecureCerts(true);
 
@@ -76,16 +70,17 @@ public class TheInternetPage {
     public final By addElementButton = By.cssSelector(".example > button");
     public final By deleteButton = By.cssSelector("button[onclick='deleteElement()']");
     public final By contentMessage = By.cssSelector("div#content p");
+    public final By checkbox1 = By.xpath("//*[@id='checkboxes']/input[1]");
+    public final By checkbox2 = By.xpath("//*[@id='checkboxes']/input[2]");
+    public final By contextBox = By.id("hot-spot");
+
     //Locators AutomationExercise
     public final By login = By.cssSelector("a[href='/login']");
     public final By name = By.name("email");
     public final By password = By.name("password");
     public final By loginButton =  By.xpath("//*[@id=\"form\"]/div/div/div[1]/div/form/button");
 
-
 }
-
-//actions
 
 
 
