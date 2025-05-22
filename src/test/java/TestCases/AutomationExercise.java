@@ -1,7 +1,7 @@
 package TestCases;
-import Base.pages.TheInternetPage;
+import Base.pages.PageBase;
 import Base.utils.ElementAction;
-import Base.utils.Waits;
+import Base.utils.Screenshots;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -13,7 +13,7 @@ import java.util.List;
 import static org.testng.AssertJUnit.assertEquals;
 
 
-public class AutomationExercise extends TheInternetPage {
+public class AutomationExercise extends PageBase {
     @BeforeMethod (alwaysRun = true)
     public void beforeMethod(){
         openBrowser("https://automationexercise.com/");
@@ -29,6 +29,7 @@ public class AutomationExercise extends TheInternetPage {
         ElementAction.ClickElement(driver, loginButton);
         // Verify logged in
         Assert.assertTrue(driver.findElement(By.linkText("Logout")).isDisplayed());
+        Screenshots.takeScreenshot(driver, "After");
     }
     @Test
     public void TestTwo() {

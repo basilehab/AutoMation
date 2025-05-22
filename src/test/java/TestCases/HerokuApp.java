@@ -1,7 +1,8 @@
 package TestCases;
-import Base.pages.TheInternetPage;
+import Base.pages.PageBase;
 import Base.utils.ElementAction;
-import Base.utils.Waits;
+import Base.utils.Screenshots;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -14,7 +15,7 @@ import java.util.Objects;
 import static org.testng.Assert.assertEquals;
 
 
-public class HerokuApp extends TheInternetPage {
+public class HerokuApp extends PageBase {
     @BeforeMethod (alwaysRun = true)
     public void beforeMethod(){
         openBrowser("https://the-internet.herokuapp.com/");
@@ -196,6 +197,31 @@ public void TestcaseFour() {
         }
      */
 }
+    @Test
+    public void TestcaseFive()  {
+        System.out.println("Test method Five");
+        ElementAction.ClickElement(driver, checkboxesLink);
+        ElementAction.SelectCheckBox(driver, checkbox1);
+        Assert.assertTrue(driver.findElement(checkbox1).isSelected());
+        ElementAction.SelectCheckBox(driver, checkbox2);
+        Assert.assertTrue(driver.findElement(checkbox2).isSelected());
+        Screenshots.takeScreenshot(driver, "After");
+    }
+
+    @Test
+    public void TestcaseSix(){
+        System.out.println("Test method Five");
+        ElementAction.ClickElement(driver, contextMenuLink);
+        ElementAction.RightClick(driver, contextBox);
+
+        Alert alert = driver.switchTo().alert();
+        String alertText = alert.getText();
+        System.out.println("Alert text is: " + alertText);
+
+        Assert.assertEquals(alertText, "You selected a context menu");
+        alert.accept();
+    }
+
     @AfterMethod (alwaysRun = true)
     public void afterMethod() {
         closeBrowser();
