@@ -34,4 +34,9 @@ public class ElementAction {
                 .contextClick(RightClick)
                 .perform();
     }
+    public static String getText(WebDriver driver, By by){
+        Waits.waitForElementVisible(driver, by);
+        return driver.findElement(by).getText();
+
+    }
 }
