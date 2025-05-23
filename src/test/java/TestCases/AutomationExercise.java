@@ -8,6 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
 import java.util.List;
 
 import static org.testng.AssertJUnit.assertEquals;
@@ -40,7 +41,18 @@ public class AutomationExercise extends PageBase {
             System.out.println(link.getDomAttribute("href"));
         }
     }
-
+    @Test(groups = "login")
+    public void TestThree() {
+        System.out.println("Test method Three");
+        // login
+        ElementAction.ClickElement(driver, login);
+        ElementAction.SendData(driver, name, "test9090@hotmail.com");
+        ElementAction.SendData(driver, password, "test99");
+        ElementAction.ClickElement(driver, loginButton);
+        // validation
+        Assert.assertTrue(ElementAction.GetErrorMassage(driver, loginError), "Logout");
+        BrowserActions.takeScreenshot(driver, "After");
+    }
     @AfterMethod (alwaysRun = true)
     public void afterMethod(){
         closeBrowser();

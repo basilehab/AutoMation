@@ -34,9 +34,17 @@ public class ElementAction {
                 .contextClick(RightClick)
                 .perform();
     }
-    public static String getText(WebDriver driver, By by){
-        Waits.waitForElementVisible(driver, by);
-        return driver.findElement(by).getText();
-
+    public static String getText(WebDriver driver, By locator){
+        Waits.waitForElementVisible(driver, locator);
+        Scrolling.scrollToElement(driver, locator);
+        return driver.findElement(locator).getText();
+    }
+    public static boolean GetErrorMassage(WebDriver driver, By locator) {
+        try {
+            Waits.waitForElementVisible(driver, locator);
+            return driver.findElement(locator).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
     }
 }
