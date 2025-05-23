@@ -1,35 +1,13 @@
 package Base.pages;
 import org.openqa.selenium.By;
-import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import java.time.Duration;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 //Driver
-public class PageBase {
+public class TheInternetPage {
     public WebDriver driver;
 
-    public void openBrowser(String URL) {
-        try {
-            ChromeOptions options = new ChromeOptions();
-            options.addArguments("--headless");
-            options.setPageLoadStrategy(PageLoadStrategy.EAGER);
-            options.setAcceptInsecureCerts(true);
-
-            this.driver = new ChromeDriver(options);
-            this.driver.manage().window().maximize();
-            this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-            this.driver.get(URL);
-        } catch (Exception e) {
-            throw new RuntimeException("Failed to initialize WebDriver", e);
-        }
-    }
-
-    public void closeBrowser() {
-        if (this.driver != null) {
-            this.driver.quit();
-        }
+    public TheInternetPage(WebDriver driver) {
+        this.driver = driver;
     }
 
     //Locators Heroku app
@@ -74,14 +52,8 @@ public class PageBase {
     public final By checkbox2 = By.xpath("//*[@id='checkboxes']/input[2]");
     public final By contextBox = By.id("hot-spot");
 
-    //Locators AutomationExercise
-    public final By login = By.cssSelector("a[href='/login']");
-    public final By name = By.name("email");
-    public final By password = By.name("password");
-    public final By loginButton =  By.xpath("//*[@id=\"form\"]/div/div/div[1]/div/form/button");
-    public final By errorMassage = By.cssSelector("form[action='/login'] p");
-    public final By logout = By.cssSelector("a[href='/logout']");
-
+    public TheInternetPage() {
+    }
 }
 
 

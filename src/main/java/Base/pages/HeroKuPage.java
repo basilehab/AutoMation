@@ -6,10 +6,10 @@ import Base.utils.BrowserActions;
 import Base.utils.ElementAction;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage {
+public class HeroKuPage {
     public WebDriver driver;
 
-    public LoginPage(WebDriver driver) {
+    public HeroKuPage(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -29,17 +29,17 @@ public class LoginPage {
     }
 
     // Actions
-    public LoginPage enterUsername(String username) {
+    public HeroKuPage enterUsername(String username) {
         ElementAction.SendData(driver, this.username, username);
         return this;
     }
 
-    public LoginPage enterPassword(String password) {
+    public HeroKuPage enterPassword(String password) {
         ElementAction.SendData(driver, this.password, password);
         return this;
     }
 
-    public LoginPage clickLoginButton() {
+    public HeroKuPage clickLoginButton() {
         ElementAction.ClickElement(driver, loginButton);
         return this;
     }
@@ -48,11 +48,11 @@ public class LoginPage {
     }
 
     // Validation
-    public LoginPage assertUnSuccessfulLogin() {
+    public HeroKuPage assertUnSuccessfulLogin() {
         Assert.assertEquals(getErrorMassage(), "Your email or password is incorrect!");
         return this;
     }
-    public LoginPage assertSuccessfulLogin() {
+    public HeroKuPage assertSuccessfulLogin() {
         Assert.assertTrue(ElementAction.GetError(driver, logout), "Logout button not visible, login failed.");
         return this;
     }

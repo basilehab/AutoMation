@@ -5,37 +5,37 @@
   <suite started-at="2025-05-02T00:47:13 EEST" name="Suite1" finished-at="2025-05-02T00:47:21 EEST" duration-ms="8569">
     <groups>
       <group name="click">
-        <method signature="SecondTest.TestcaseOne()[pri:0, instance:TestCases.HerokuApp@5656be13]" name="TestcaseOne" class="TestCases.HerokuApp"/>
-        <method signature="SecondTest.TestcaseTwo()[pri:0, instance:TestCases.HerokuApp@5656be13]" name="TestcaseTwo" class="TestCases.HerokuApp"/>
+        <method signature="SecondTest.TestcaseOne()[pri:0, instance:TestCases.heroKu@5656be13]" name="TestcaseOne" class="TestCases.heroKu"/>
+        <method signature="SecondTest.TestcaseTwo()[pri:0, instance:TestCases.heroKu@5656be13]" name="TestcaseTwo" class="TestCases.heroKu"/>
       </group> <!-- click -->
     </groups>
     <test started-at="2025-05-02T00:47:13 EEST" name="GroupTests" finished-at="2025-05-02T00:47:21 EEST" duration-ms="8569">
-      <class name="TestCases.HerokuApp">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCases.HerokuApp@5656be13]" started-at="2025-05-02T00:47:13 EEST" name="beforeMethod" finished-at="2025-05-02T00:47:15 EEST" duration-ms="2771" status="PASS">
+      <class name="TestCases.heroKu">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCases.heroKu@5656be13]" started-at="2025-05-02T00:47:13 EEST" name="beforeMethod" finished-at="2025-05-02T00:47:15 EEST" duration-ms="2771" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="TestcaseOne()[pri:0, instance:TestCases.HerokuApp@5656be13]" started-at="2025-05-02T00:47:15 EEST" name="TestcaseOne" finished-at="2025-05-02T00:47:16 EEST" duration-ms="251" status="PASS">
+        <test-method signature="TestcaseOne()[pri:0, instance:TestCases.heroKu@5656be13]" started-at="2025-05-02T00:47:15 EEST" name="TestcaseOne" finished-at="2025-05-02T00:47:16 EEST" duration-ms="251" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestcaseOne -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:TestCases.HerokuApp@5656be13]" started-at="2025-05-02T00:47:16 EEST" name="afterMethod" finished-at="2025-05-02T00:47:16 EEST" duration-ms="196" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:TestCases.heroKu@5656be13]" started-at="2025-05-02T00:47:16 EEST" name="afterMethod" finished-at="2025-05-02T00:47:16 EEST" duration-ms="196" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCases.HerokuApp@5656be13]" started-at="2025-05-02T00:47:16 EEST" name="beforeMethod" finished-at="2025-05-02T00:47:18 EEST" duration-ms="2318" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCases.heroKu@5656be13]" started-at="2025-05-02T00:47:16 EEST" name="beforeMethod" finished-at="2025-05-02T00:47:18 EEST" duration-ms="2318" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="TestcaseTwo()[pri:0, instance:TestCases.HerokuApp@5656be13]" started-at="2025-05-02T00:47:18 EEST" name="TestcaseTwo" finished-at="2025-05-02T00:47:21 EEST" duration-ms="2777" status="PASS">
+        <test-method signature="TestcaseTwo()[pri:0, instance:TestCases.heroKu@5656be13]" started-at="2025-05-02T00:47:18 EEST" name="TestcaseTwo" finished-at="2025-05-02T00:47:21 EEST" duration-ms="2777" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestcaseTwo -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:TestCases.HerokuApp@5656be13]" started-at="2025-05-02T00:47:21 EEST" name="afterMethod" finished-at="2025-05-02T00:47:21 EEST" duration-ms="220" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:TestCases.heroKu@5656be13]" started-at="2025-05-02T00:47:21 EEST" name="afterMethod" finished-at="2025-05-02T00:47:21 EEST" duration-ms="220" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- TestCases.HerokuApp -->
+      </class> <!-- TestCases.heroKu -->
     </test> <!-- GroupTests -->
   </suite> <!-- Suite1 -->
 </testng-results>

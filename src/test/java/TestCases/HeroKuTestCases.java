@@ -1,8 +1,9 @@
 package TestCases;
 
-import Base.pages.LoginPage;
-import Base.pages.PageBase;
+import Base.driver.DriverManager;
+import Base.pages.HeroKuPage;
 import Base.utils.BrowserActions;
+import org.jsoup.Connection;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,18 +16,14 @@ import java.util.List;
 
 import static org.testng.AssertJUnit.assertEquals;
 
-public class AutomationExercise {
+public class HeroKuTestCases {
     public WebDriver driver;
-    LoginPage loginPage;
+    HeroKuPage heroKuPage;
 
     @BeforeMethod(alwaysRun = true)
     public void setup() {
-        PageBase base = new PageBase();
-        base.openBrowser("https://automationexercise.com");
-        driver = base.driver;
-
-        loginPage = new LoginPage(driver);
-        loginPage.navigateToLoginPage();
+        driver = DriverManager.openBrowser("https://automationexercise.com/login");
+        heroKuPage = new HeroKuPage(driver);
     }
 
     @Test
@@ -35,7 +32,7 @@ public class AutomationExercise {
 
     @Test
     public void successfulLogin() {
-        loginPage.enterUsername("test9090@hotmail.com")
+        heroKuPage.enterUsername("test9090@hotmail.com")
                 .enterPassword("test9090")
                 .clickLoginButton()
                 .assertSuccessfulLogin();
@@ -45,7 +42,7 @@ public class AutomationExercise {
 
     @Test
     public void unSuccessfulLogin() {
-        loginPage.enterUsername("test90@hotmail.com")
+        heroKuPage.enterUsername("test90@hotmail.com")
                 .enterPassword("test90")
                 .clickLoginButton()
                 .assertUnSuccessfulLogin();
@@ -68,11 +65,8 @@ public class AutomationExercise {
         }
     }
 
-
-    @AfterMethod(alwaysRun = true)
-    public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
+    @AfterMethod (alwaysRun = true)
+    public void afterMethod() {
+        DriverManager.closeBrowser();
     }
 }

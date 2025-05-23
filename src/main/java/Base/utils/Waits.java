@@ -8,7 +8,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class Waits {
-
     public static WebElement waitForElementPresent(WebDriver driver, By locator) {
         return new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(driver1 -> driver1.findElement(locator));

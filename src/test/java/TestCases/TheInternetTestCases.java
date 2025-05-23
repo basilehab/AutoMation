@@ -1,11 +1,11 @@
 package TestCases;
-import Base.pages.PageBase;
+
+import Base.driver.DriverManager;
+import Base.pages.HeroKuPage;
+import Base.pages.TheInternetPage;
 import Base.utils.BrowserActions;
 import Base.utils.ElementAction;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -15,10 +15,14 @@ import java.util.Objects;
 import static org.testng.Assert.assertEquals;
 
 
-public class HerokuApp extends PageBase {
-    @BeforeMethod (alwaysRun = true)
-    public void beforeMethod(){
-        openBrowser("https://the-internet.herokuapp.com/");
+public class TheInternetTestCases extends TheInternetPage {
+    public WebDriver driver;
+    TheInternetPage TheInternetPage;
+
+    @BeforeMethod(alwaysRun = true)
+    public void setup() {
+        driver = DriverManager.openBrowser("https://the-internet.herokuapp.com/");
+        TheInternetPage = new TheInternetPage(driver);
     }
 
 @Test
@@ -27,6 +31,7 @@ public void TestcaseOne()  {
     ElementAction.ClickElement(driver, abTestLink);
     assertEquals(Objects.requireNonNull(driver.getTitle()), "The Internet");
     System.out.println("page title is: " + driver.getTitle());
+    BrowserActions.takeScreenshot(driver, "After");
 }
 
 @Test
@@ -54,9 +59,8 @@ public void TestcaseTwo() {
 @Test
 public void TestcaseThree() {
     System.out.println("Test method Three");
-
-    /*ElementAction.ClickElement(driver, basicAuthLink);
-    driver.navigate().to("https://admin:admin@the-internet.herokuapp.com/basic_auth");*/
+    
+    ElementAction.ClickElement(driver, basicAuthLink);
     driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");
 
     String displayed_message = driver.findElement(contentMessage).getText();
@@ -224,6 +228,6 @@ public void TestcaseFour() {
 
     @AfterMethod (alwaysRun = true)
     public void afterMethod() {
-        closeBrowser();
+        DriverManager.closeBrowser();
     }
 }
