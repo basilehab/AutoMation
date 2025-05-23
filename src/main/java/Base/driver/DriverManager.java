@@ -1,36 +1,43 @@
 package Base.driver;
 
-import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-
 import java.time.Duration;
+import static org.testng.Assert.fail;
 
 public class DriverManager {
-    public static WebDriver driver;
+
+    private static final ThreadLocal<WebDriver> driverThreadLocal = new ThreadLocal<>();
+
+    private DriverManager() {}
 
     public static WebDriver openBrowser(String URL) {
         try {
-            ChromeOptions options = new ChromeOptions();
-            options.addArguments("--headless"); // احذفها لو عايز تشوف التست
-            options.setPageLoadStrategy(PageLoadStrategy.EAGER);
-            options.setAcceptInsecureCerts(true);
-
-            driver = new ChromeDriver(options);
+            WebDriver driver = BrowserFactory.getBrowser(System.getProperty("browser", "chrome"));
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
             driver.get(URL);
+            setDriver(driver);
         } catch (Exception e) {
             throw new RuntimeException("Failed to initialize WebDriver", e);
         }
-        return driver;
+        return getDriver();
     }
 
-
     public static void closeBrowser() {
-        if (driver != null) {
-            driver.quit();
+        if (getDriver() != null) {
+            getDriver().quit();
+            driverThreadLocal.remove();
         }
+    }
+
+    public static WebDriver getDriver() {
+        if (driverThreadLocal.get() == null) {
+            fail("Driver is null");
+        }
+        return driverThreadLocal.get();
+    }
+
+    public static void setDriver(WebDriver driver) {
+        driverThreadLocal.set(driver);
     }
 }

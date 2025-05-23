@@ -1,15 +1,12 @@
 package TestCases;
 
 import Base.driver.DriverManager;
-import Base.pages.HeroKuPage;
 import Base.pages.TheInternetPage;
 import Base.utils.BrowserActions;
 import Base.utils.ElementAction;
 import org.openqa.selenium.*;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import java.util.List;
 import java.util.Objects;
 import static org.testng.Assert.assertEquals;

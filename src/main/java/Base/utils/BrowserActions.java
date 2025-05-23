@@ -17,6 +17,9 @@ public class BrowserActions {
     public static String getCurrentURL(WebDriver driver) {
         return driver.getCurrentUrl();
     }
+    public static String getCurrentTitle(WebDriver driver) {
+        return driver.getTitle();
+    }
 
     public static void refreshPage(WebDriver driver) {
         driver.navigate().refresh();

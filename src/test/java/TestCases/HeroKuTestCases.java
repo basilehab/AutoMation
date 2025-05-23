@@ -3,14 +3,12 @@ package TestCases;
 import Base.driver.DriverManager;
 import Base.pages.HeroKuPage;
 import Base.utils.BrowserActions;
-import org.jsoup.Connection;
+import Base.utils.ElementAction;
+import Base.utils.SoftValidation;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-//import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.util.List;
 
@@ -35,7 +33,7 @@ public class HeroKuTestCases {
         heroKuPage.enterUsername("test9090@hotmail.com")
                 .enterPassword("test9090")
                 .clickLoginButton()
-                .assertSuccessfulLogin();
+                .assertSuccessfulLoginSoft();
                 BrowserActions.takeScreenshot(driver, "After");
 
     }
@@ -51,13 +49,13 @@ public class HeroKuTestCases {
     }
     @Test
     public void countAndPrintAllLinks() {
-        List<WebElement> links = driver.findElements(By.tagName("a"));
+        List<WebElement> links = ElementAction.FindElements(driver,By.tagName("a"));
         System.out.println("Number of links: " + links.size());
     }
 
     @Test
     public void assertLinksNumber() {
-        List<WebElement> links = driver.findElements(By.tagName("a"));
+        List<WebElement> links = ElementAction.FindElements(driver, By.tagName("a"));
         assertEquals("expected number of links", 10, links.size());
 
         for (WebElement link : links) {
@@ -68,5 +66,6 @@ public class HeroKuTestCases {
     @AfterMethod (alwaysRun = true)
     public void afterMethod() {
         DriverManager.closeBrowser();
+        SoftValidation.customAssertAll();
     }
 }
