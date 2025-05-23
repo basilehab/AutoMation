@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 public class ElementAction {
-    private ElementAction(){
+    public ElementAction(){
 
     }
     public static void SendData(WebDriver driver, By locator , String data){
@@ -39,7 +39,7 @@ public class ElementAction {
         Scrolling.scrollToElement(driver, locator);
         return driver.findElement(locator).getText();
     }
-    public static boolean GetErrorMassage(WebDriver driver, By locator) {
+    public static boolean GetError(WebDriver driver, By locator) {
         try {
             Waits.waitForElementVisible(driver, locator);
             return driver.findElement(locator).isDisplayed();

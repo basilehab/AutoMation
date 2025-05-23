@@ -79,7 +79,8 @@ public class PageBase {
     public final By name = By.name("email");
     public final By password = By.name("password");
     public final By loginButton =  By.xpath("//*[@id=\"form\"]/div/div/div[1]/div/form/button");
-    public final By loginError = By.cssSelector("form[action='/login'] p");
+    public final By errorMassage = By.cssSelector("form[action='/login'] p");
+    public final By logout = By.cssSelector("a[href='/logout']");
 
 }
 
