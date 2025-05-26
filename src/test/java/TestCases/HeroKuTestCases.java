@@ -16,12 +16,11 @@ import static org.testng.AssertJUnit.assertEquals;
 
 public class HeroKuTestCases {
     public WebDriver driver;
-    HeroKuPage heroKuPage;
 
     @BeforeMethod(alwaysRun = true)
     public void setup() {
-        driver = DriverManager.openBrowser("https://automationexercise.com/login");
-        heroKuPage = new HeroKuPage(driver);
+        driver = DriverManager.openBrowser("chrome");
+        new HeroKuPage(driver).navigateToLoginPage();
     }
 
     @Test
@@ -30,7 +29,7 @@ public class HeroKuTestCases {
 
     @Test
     public void successfulLogin() {
-        heroKuPage.enterUsername("test9090@hotmail.com")
+        new HeroKuPage(driver).enterUsername("test9090@hotmail.com")
                 .enterPassword("test9090")
                 .clickLoginButton()
                 .assertSuccessfulLoginSoft();
@@ -40,7 +39,7 @@ public class HeroKuTestCases {
 
     @Test
     public void unSuccessfulLogin() {
-        heroKuPage.enterUsername("test90@hotmail.com")
+        new HeroKuPage(driver).enterUsername("test90@hotmail.com")
                 .enterPassword("test90")
                 .clickLoginButton()
                 .assertUnSuccessfulLogin();

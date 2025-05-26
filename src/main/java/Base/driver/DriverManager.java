@@ -1,7 +1,6 @@
 package Base.driver;
 
 import org.openqa.selenium.WebDriver;
-import java.time.Duration;
 import static org.testng.Assert.fail;
 
 public class DriverManager {
@@ -10,16 +9,9 @@ public class DriverManager {
 
     private DriverManager() {}
 
-    public static WebDriver openBrowser(String URL) {
-        try {
-            WebDriver driver = BrowserFactory.getBrowser(System.getProperty("browser", "chrome"));
-            driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-            driver.get(URL);
+    public static WebDriver openBrowser(String browserName) {
+            WebDriver driver = BrowserFactory.getBrowser(browserName);
             setDriver(driver);
-        } catch (Exception e) {
-            throw new RuntimeException("Failed to initialize WebDriver", e);
-        }
         return getDriver();
     }
 

@@ -18,8 +18,8 @@ public class TheInternetTestCases extends TheInternetPage {
 
     @BeforeMethod(alwaysRun = true)
     public void setup() {
-        driver = DriverManager.openBrowser("https://the-internet.herokuapp.com/");
-        TheInternetPage = new TheInternetPage(driver);
+        driver = DriverManager.openBrowser("chrome");
+        new TheInternetPage(driver).navigateToPage();
     }
 
 @Test
