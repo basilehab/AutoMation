@@ -1,4 +1,5 @@
 package Base.pages;
+import Base.utils.BrowserActions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -10,6 +11,9 @@ public class TheInternetPage {
         this.driver = driver;
     }
 
+    public void navigateToPage() {
+        BrowserActions.navigateToURL(driver, "https://the-internet.herokuapp.com/");
+    }
     //Locators Heroku app
     public final By abTestLink = By.cssSelector("a[href='/abtest']");
     public final By basicAuthLink = By.cssSelector("a[href='/basic_auth']");

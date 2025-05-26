@@ -11,12 +11,14 @@ public class BrowserActions {
     }
 
     public static void navigateToURL(WebDriver driver, String url) {
+        LogsUtil.info("navigating to url: " , url);
         driver.get(url);
     }
 
     public static String getCurrentURL(WebDriver driver) {
         return driver.getCurrentUrl();
     }
+
     public static String getCurrentTitle(WebDriver driver) {
         return driver.getTitle();
     }

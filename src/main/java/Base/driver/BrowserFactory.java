@@ -8,10 +8,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-
-import java.util.Locale;
 import java.util.Map;
-import java.util.Objects;
 
 public class BrowserFactory {
     public static WebDriver getBrowser(String browserName) {

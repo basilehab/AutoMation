@@ -1,7 +1,7 @@
 package Base.driver;
 
+import Base.utils.LogsUtil;
 import org.openqa.selenium.WebDriver;
-import java.time.Duration;
 import static org.testng.Assert.fail;
 
 public class DriverManager {
@@ -10,16 +10,10 @@ public class DriverManager {
 
     private DriverManager() {}
 
-    public static WebDriver openBrowser(String URL) {
-        try {
-            WebDriver driver = BrowserFactory.getBrowser(System.getProperty("browser", "chrome"));
-            driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-            driver.get(URL);
+    public static WebDriver openBrowser(String browserName) {
+            WebDriver driver = BrowserFactory.getBrowser(browserName);
+            LogsUtil.info("Driver created on: ", browserName);
             setDriver(driver);
-        } catch (Exception e) {
-            throw new RuntimeException("Failed to initialize WebDriver", e);
-        }
         return getDriver();
     }
 
@@ -32,6 +26,7 @@ public class DriverManager {
 
     public static WebDriver getDriver() {
         if (driverThreadLocal.get() == null) {
+            LogsUtil.error("Driver is null");
             fail("Driver is null");
         }
         return driverThreadLocal.get();

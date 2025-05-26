@@ -15,13 +15,15 @@ public class ElementAction {
     public static void SendData(WebDriver driver, By locator, String data) {
         Waits.waitForElementVisible(driver, locator);
         Scrolling.scrollToElement(driver, locator);
-        driver.findElement(locator).sendKeys(data);
+        FindElement(driver, locator).sendKeys(data);
+        LogsUtil.info("data sent: ", data, "in field: ", locator.toString());
     }
 
     public static void ClickElement(WebDriver driver, By locator) {
         Waits.waitForElementVisible(driver, locator);
         Scrolling.scrollToElement(driver, locator);
-        driver.findElement(locator).click();
+        FindElement(driver, locator).click();
+        LogsUtil.info("clicked on element: ", locator.toString());
     }
 
     public static void SelectCheckBox(WebDriver driver, By locator) {
@@ -44,23 +46,26 @@ public class ElementAction {
     public static String GetText(WebDriver driver, By locator) {
         Waits.waitForElementVisible(driver, locator);
         Scrolling.scrollToElement(driver, locator);
-        return driver.findElement(locator).getText();
+        LogsUtil.info("getting text from the element: " , locator.toString(), "text: ", FindElement(driver, locator).getText());
+        return FindElement(driver, locator).getText();
     }
 
     public static boolean GetError(WebDriver driver, By locator) {
         try {
             Waits.waitForElementVisible(driver, locator);
-            return driver.findElement(locator).isDisplayed();
+            return FindElement(driver, locator).isDisplayed();
         } catch (Exception e) {
             return false;
         }
     }
 
     public static WebElement FindElement(WebDriver driver, By locator) {
+        LogsUtil.info("Finding element: " , locator.toString());
         return driver.findElement(locator);
     }
 
     public static List<WebElement> FindElements(WebDriver driver, By locator) {
+        LogsUtil.info("Finding elements: " , locator.toString());
         return driver.findElements(locator);
     }
 
