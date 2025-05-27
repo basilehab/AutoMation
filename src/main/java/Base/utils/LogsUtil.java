@@ -4,6 +4,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class LogsUtil {
+    public static final String LOGS_PATH = "test-outputs/allure_result";
+
     private LogsUtil() {
         super();
     }

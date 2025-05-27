@@ -2,20 +2,28 @@ package TestCases;
 
 import Base.driver.DriverManager;
 import Base.pages.HeroKuPage;
-import Base.utils.BrowserActions;
-import Base.utils.ElementAction;
-import Base.utils.SoftValidation;
+import Base.utils.*;
+import junit.framework.TestSuite;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.*;
 
+
+import java.io.File;
 import java.util.List;
 
 import static org.testng.AssertJUnit.assertEquals;
 
 public class HeroKuTestCases {
     public WebDriver driver;
+    File allure_result = new File("test-outputs/allure_result");
+
+    @BeforeSuite
+    public void BeforeSuite() {
+        FilesUtils.deleteFiles(allure_result);
+    }
+
 
     @BeforeMethod(alwaysRun = true)
     public void setup() {
@@ -66,5 +74,9 @@ public class HeroKuTestCases {
     public void afterMethod() {
         DriverManager.closeBrowser();
         SoftValidation.customAssertAll();
+    }
+    @AfterClass
+    public void afterClass(){
+        Allureutils.attachLogsToAllureReport();
     }
 }
