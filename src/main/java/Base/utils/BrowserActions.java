@@ -1,6 +1,7 @@
 package Base.utils;
 
 import io.qameta.allure.Allure;
+import io.qameta.allure.Step;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +10,7 @@ import java.io.ByteArrayInputStream;
 public class BrowserActions {
     private BrowserActions() {
     }
-
+    @Step("navigating to url: {url}")
     public static void navigateToURL(WebDriver driver, String url) {
         LogsUtil.info("navigating to url: " , url);
         driver.get(url);

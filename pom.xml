@@ -67,6 +67,7 @@
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-testng</artifactId>
             <version>${allure.version}</version>
+            <scope>test, compile</scope>
         </dependency>
 
         <!-- SHAFT Engine -->

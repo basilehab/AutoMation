@@ -3,6 +3,7 @@ package Base.driver;
 import Base.utils.LogsUtil;
 import org.openqa.selenium.WebDriver;
 import static org.testng.Assert.fail;
+import io.qameta.allure.Step;
 
 public class DriverManager {
 
@@ -10,13 +11,14 @@ public class DriverManager {
 
     private DriverManager() {}
 
+    @Step("Create driver instance on: {browsername}")
     public static WebDriver openBrowser(String browserName) {
             WebDriver driver = BrowserFactory.getBrowser(browserName);
             LogsUtil.info("Driver created on: ", browserName);
             setDriver(driver);
         return getDriver();
     }
-
+    @Step
     public static void closeBrowser() {
         if (getDriver() != null) {
             getDriver().quit();
