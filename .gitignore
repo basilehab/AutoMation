@@ -1,38 +1,49 @@
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/Test/**/target/
+# ===== Java build files =====
+/target/
+*.class
 
-### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
-*.iws
+# ===== IntelliJ IDEA =====
+.idea/
 *.iml
-*.ipr
+*.iws
+out/
 
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/Test/**/build/
-
-### VS Code ###
+# ===== VS Code =====
 .vscode/
 
-### Mac OS ###
-.DS_Store
+# ===== OS-specific files =====
+.DS_Store         # macOS
+Thumbs.db         # Windows
+ehthumbs.db       # Windows
+desktop.ini       # Windows
+
+# ===== Maven =====
+/.mvn/
+/**/target/
+/**/build/
+!src/main/**/target/
+!src/test/**/target/
+
+# ===== Logs & Test Results =====
+*.log
+logs/
+test-output/
+allure-results/
+allure-report/
+*.json
+
+# ===== Allure =====
+allure-results/
+allure-report/
+*.xml
+last-history/
+
+# ===== Environment configs =====
+.env
+*.properties
+!src/main/resources/*.properties
+
+# ===== Others =====
+*.swp
+*.bak
+*.tmp

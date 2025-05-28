@@ -24,5 +24,12 @@ public class Allureutils {
             LogsUtil.error("Failed to attach logs to Allure report: " + e.getMessage());
         }
     }
+    public static void attachScreenshotToAllure(String screenshotName, String screenshotPath) {
+        try {
+            Allure.addAttachment(screenshotName, Files.newInputStream(Path.of(screenshotPath)));
+        } catch (Exception e) {
+            LogsUtil.error("Failed to attach screenshot to Allure report: " + e.getMessage());
+        }
+    }
 }
 
