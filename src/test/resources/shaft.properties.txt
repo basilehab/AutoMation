@@ -1,3 +1,0 @@
-execution.allure.active=true
-execution.allure.linkScreenshots=true
-execution.screenshotParams_whenToTakeAScreenshot=Always
