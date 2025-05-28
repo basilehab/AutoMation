@@ -41,7 +41,7 @@ public class HeroKuTestCases {
                 .enterPassword("test9090")
                 .clickLoginButton()
                 .assertSuccessfulLoginSoft();
-                BrowserActions.takeScreenshot(driver, "After");
+                Screenshots.takeScreenshot(driver, "After");
 
     }
 
@@ -51,7 +51,7 @@ public class HeroKuTestCases {
                 .enterPassword("test90")
                 .clickLoginButton()
                 .assertUnSuccessfulLogin();
-                BrowserActions.takeScreenshot(driver, "After");
+                Screenshots.takeScreenshot(driver, "After");
 
     }
     @Test

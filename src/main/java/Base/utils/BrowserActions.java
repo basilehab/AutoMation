@@ -35,14 +35,5 @@ public class BrowserActions {
     public static void goForward(WebDriver driver) {
         driver.navigate().forward();
     }
-
-    public static void takeScreenshot(WebDriver driver, String screenshotName) {
-        try {
-            byte[] screenshotBytes = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-            Allure.addAttachment(screenshotName, new ByteArrayInputStream(screenshotBytes));
-        } catch (Exception e) {
-            System.out.println(" Failed to capture screenshot: " + e.getMessage());
-        }
-    }
 }
 

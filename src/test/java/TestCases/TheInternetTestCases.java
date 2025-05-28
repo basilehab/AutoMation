@@ -4,6 +4,7 @@ import Base.driver.DriverManager;
 import Base.pages.TheInternetPage;
 import Base.utils.BrowserActions;
 import Base.utils.ElementAction;
+import Base.utils.Screenshots;
 import org.openqa.selenium.*;
 import org.testng.Assert;
 import org.testng.annotations.*;
@@ -28,7 +29,7 @@ public void TestcaseOne()  {
     ElementAction.ClickElement(driver, abTestLink);
     assertEquals(Objects.requireNonNull(driver.getTitle()), "The Internet");
     System.out.println("page title is: " + driver.getTitle());
-    BrowserActions.takeScreenshot(driver, "After");
+    Screenshots.takeScreenshot(driver, "After");
 }
 
 @Test
@@ -206,7 +207,7 @@ public void TestcaseFour() {
         Assert.assertTrue(driver.findElement(checkbox1).isSelected());
         ElementAction.SelectCheckBox(driver, checkbox2);
         Assert.assertTrue(driver.findElement(checkbox2).isSelected());
-        BrowserActions.takeScreenshot(driver, "After");
+        Screenshots.takeScreenshot(driver, "After");
     }
 
     @Test
