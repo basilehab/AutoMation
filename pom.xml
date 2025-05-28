@@ -14,6 +14,7 @@
         <testng.version>7.10.2</testng.version>
         <allure.version>2.24.0</allure.version>
         <aspectj.version>1.9.20.1</aspectj.version>
+        <directory>target</directory>
     </properties>
 
     <build>
