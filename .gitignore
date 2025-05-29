@@ -33,8 +33,9 @@ allure-report/
 *.json
 
 # ===== Allure =====
-allure-results/
-allure-report/
+.allure
+execution-summary
+test-outputs
 *.xml
 last-history/
 
