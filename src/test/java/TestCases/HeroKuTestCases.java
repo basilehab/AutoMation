@@ -19,7 +19,7 @@ public class HeroKuTestCases {
     private static final Logger logger = LogManager.getLogger(HeroKuTestCases.class);
 
     public WebDriver driver;
-    File allure_result = new File("test-outputs/allure_result");
+    File allure_result = new File("target/allure-results");
 
     @BeforeSuite
     public void BeforeSuite() {
@@ -93,6 +93,6 @@ public class HeroKuTestCases {
     @AfterClass
     public void afterClass() {
         logger.info("Attaching logs to Allure report");
-        Allureutils.attachLogsToAllureReport();
+        AllureUtils.attachLogsToAllureReport();
     }
 }

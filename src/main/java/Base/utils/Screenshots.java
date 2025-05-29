@@ -10,7 +10,7 @@ import static Base.utils.TimestampUtils.getTimestamp;
 
 
 public class Screenshots {
-    public static final String SCREENSHOTS_PATH = "test-outputs/screenshots/";
+    public static final String SCREENSHOTS_PATH = "target/screenshots/";
 
 
     private Screenshots() {
@@ -23,7 +23,7 @@ public class Screenshots {
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             File screenshotFile = new File(SCREENSHOTS_PATH + screenshotName + "_" + getTimestamp() + ".png");
             FileUtils.copyFile(screenshot, screenshotFile);
-            Allureutils.attachScreenshotToAllure(screenshotName, screenshotFile.getPath());
+            AllureUtils.attachScreenshotToAllure(screenshotName, screenshotFile.getPath());
         } catch (Exception e) {
             LogsUtil.error("Failed to take screenshot: " + e.getMessage());
         }
