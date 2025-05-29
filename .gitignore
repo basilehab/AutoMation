@@ -36,6 +36,10 @@ allure-report/
 .allure
 execution-summary
 test-outputs
+AutomationExercise.xml
+docker-compose.yml
+generate_allure_report.bat
+Internet.xml
 *.xml
 last-history/
 
