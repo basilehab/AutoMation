@@ -14,10 +14,10 @@
         <testng.version>7.10.2</testng.version>
         <allure.version>2.24.0</allure.version>
         <aspectj.version>1.9.20.1</aspectj.version>
-        <directory>target</directory>
     </properties>
 
     <build>
+        <directory>test-outputs/target</directory>
         <plugins>
             <!-- Plugin to run tests with AspectJ agent -->
             <plugin>
@@ -52,9 +52,8 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.21.0</version>
+            <version>4.33.0</version>
         </dependency>
-
         <!-- TestNG -->
         <dependency>
             <groupId>org.testng</groupId>

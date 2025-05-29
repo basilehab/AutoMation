@@ -4,5 +4,3 @@ set JAVA_HOME=C:\Program Files\Java\jdk-23
 set path=%JAVA_HOME%\bin;%path%
 set path=C:\Users\Basel\.m2\repository\allure\allure-2.33.0\bin;%path%
 allure serve allure-results -h localhost
-pause
-exit
