@@ -48,3 +48,7 @@ last-history/
 *.swp
 *.bak
 *.tmp
+AutomationExercise.xml
+docker-compose.yml
+generate_allure_report.bat
+Internet.xml
