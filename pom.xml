@@ -17,7 +17,7 @@
     </properties>
 
     <build>
-        <directory>test-outputs/target</directory>
+        <directory>target/test-outputs</directory>
         <plugins>
             <!-- Plugin to run tests with AspectJ agent -->
             <plugin>

@@ -2,6 +2,7 @@ package TestCases;
 
 import Base.driver.DriverManager;
 import Base.pages.TheInternetPage;
+import Base.utils.AllureUtils;
 import Base.utils.BrowserActions;
 import Base.utils.ElementAction;
 import Base.utils.Screenshots;
@@ -133,6 +134,8 @@ public class TheInternetTestCases extends TheInternetPage {
     @AfterMethod (alwaysRun = true)
     public void afterMethod() {
         logger.info("Closing browser after test method");
+        logger.info("Attaching logs to Allure report");
+        AllureUtils.attachLogsToAllureReport();
         DriverManager.closeBrowser();
     }
 }
