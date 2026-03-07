@@ -23,4 +23,17 @@ public class ElementActions {
         driver.findElement(locator).click();
     }
 
+    public static void AddToCart(WebDriver driver, By locator){
+        Waits.WaitForElementToBePresent(driver,locator);
+        Waits.WaitForElementToBeVisible(driver,locator);
+        driver.findElement(locator).click();
+    }
+
+    public static void ContinueShopping1(WebDriver driver, By locator){
+        Waits.WaitForElementToBePresent(driver,locator);
+        Waits.WaitForElementToBeVisible(driver,locator);
+        driver.findElement(locator).click();
+    }
+
+
 }

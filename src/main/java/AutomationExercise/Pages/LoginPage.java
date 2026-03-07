@@ -4,6 +4,7 @@ import AutomationExercise.utils.BrowserActions;
 import AutomationExercise.utils.ElementActions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 public class LoginPage {
@@ -15,6 +16,8 @@ public class LoginPage {
     private final By email = By.name("email");
     private final By Password = By.name("password");
     private final By LoginButton = By.cssSelector("[data-qa='login-button']");
+    private final By AddItemToCart = By.cssSelector("a[data-product-id='1']");
+    private final By ContinueShopping = By.cssSelector("button.btn-success.close-modal");
 
     //Constructor to initialize the driver
     public LoginPage(WebDriver driver){
@@ -44,6 +47,14 @@ public class LoginPage {
     }
     public void ClickOnLogin(){
         ElementActions.ClickElement(driver,LoginButton);
+    }
+    public LoginPage AddToCart1(){
+        ElementActions.AddToCart(driver,AddItemToCart);
+        return this;
+    }
+    public LoginPage ConShopping(){
+        ElementActions.ContinueShopping1(driver,ContinueShopping);
+        return this;
     }
 
 
