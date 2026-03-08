@@ -2,6 +2,7 @@ package AutomationExercise;
 
 import AutomationExercise.Pages.LoginPage;
 import AutomationExercise.utils.BrowserActions;
+import AutomationExercise.utils.CustomSoftAssertion;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -27,7 +28,8 @@ public class LoginTest {
     @Test(priority = 2)
     public void AddProductToCart(){
         BrowserActions.NavigateToWebsite(driver,"https://automationexercise.com/products");
-        new LoginPage(driver).AddToCart1().ConShopping();
+        new LoginPage(driver).AddToCart1().ConShopping().AssertSuccessfulLogintoProductPage();
+        CustomSoftAssertion.CustomAssertAll();
     }
 
 
@@ -47,6 +49,7 @@ public class LoginTest {
     @AfterClass
     public void tearDown(){
         driver.quit();
+        //CustomSoftAssertion.CustomAssertAll();
     }
 
 }

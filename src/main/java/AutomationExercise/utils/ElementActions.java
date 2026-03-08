@@ -35,5 +35,15 @@ public class ElementActions {
         driver.findElement(locator).click();
     }
 
+    public static String GetText(WebDriver driver, By locator){
+        Waits.WaitForElementToBeVisible(driver, locator);
+        Scroll.ScrollToElement(driver, locator);
+        return findTheElement(driver,locator).getText();
+    }
+
+    public static WebElement findTheElement(WebDriver driver, By locator){
+        return driver.findElement(locator);
+    }
+
 
 }

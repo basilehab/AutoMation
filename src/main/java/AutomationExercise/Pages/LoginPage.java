@@ -1,7 +1,9 @@
 package AutomationExercise.Pages;
 
 import AutomationExercise.utils.BrowserActions;
+import AutomationExercise.utils.CustomSoftAssertion;
 import AutomationExercise.utils.ElementActions;
+import AutomationExercise.utils.Validations;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,6 +20,7 @@ public class LoginPage {
     private final By LoginButton = By.cssSelector("[data-qa='login-button']");
     private final By AddItemToCart = By.cssSelector("a[data-product-id='1']");
     private final By ContinueShopping = By.cssSelector("button.btn-success.close-modal");
+    private final By ErrorMessage = By.xpath("//p[text()='Your email or password is incorrect!']");
 
     //Constructor to initialize the driver
     public LoginPage(WebDriver driver){
@@ -56,15 +59,38 @@ public class LoginPage {
         ElementActions.ContinueShopping1(driver,ContinueShopping);
         return this;
     }
+    public String GetErrorMessage(){
+        return ElementActions.GetText(driver,ErrorMessage);
+    }
 
 
 
 
     //Validations "testNG -- assertions"
+
+
     //1-assert on successful login
     public void AssertSuccessfulLogin(){
-        Assert.assertEquals(BrowserActions.
-                GetCurrentUrl(driver),"https://automationexercise.com/login");
+        Validations.ValidatePageUrl(driver, "https://automationexercise.com/login");
+    }
+
+    public void AssertUnSuccessfulLogin(){
+        Validations.ValidateEquals(GetErrorMessage(),"Username and password don't match users in this service","Error message not expected");
+    }
+
+
+    public LoginPage AssertLoginPageTitle(){
+        CustomSoftAssertion.softAssertion.assertEquals(BrowserActions.getCurrentTitle(driver),"Automation Exercise - All Products","title not expected");
+        //CustomSoftAssertion.softAssertion.assertEquals(BrowserActions.getCurrentTitle(driver),"Automation Exercise","title not expected"); //assertion fail
+        return this;
+    }
+    public LoginPage AssertLoginPageUrl(){
+        CustomSoftAssertion.softAssertion.assertEquals(BrowserActions.GetCurrentUrl(driver),"https://automationexercise.com/products","Url not expected");
+        return this;
+    }
+    public LoginPage AssertSuccessfulLogintoProductPage(){
+        AssertLoginPageUrl().AssertLoginPageTitle();
+        return this;
     }
 
 

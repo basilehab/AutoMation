@@ -14,4 +14,14 @@ public class BrowserActions {
     public static String GetCurrentUrl(WebDriver driver){
         return driver.getCurrentUrl();
     }
+
+    //Get current title
+    public static String getCurrentTitle(WebDriver driver){
+        return driver.getTitle();
+    }
+
+    //Refresh Page
+    public static void refreshPage(WebDriver driver){
+        driver.navigate().refresh();
+    }
 }
