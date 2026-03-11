@@ -1,6 +1,7 @@
 package AutomationExercise;
 
 import AutomationExercise.Pages.LoginPage;
+import AutomationExercise.drivers.DriverManager;
 import AutomationExercise.utils.BrowserActions;
 import AutomationExercise.utils.CustomSoftAssertion;
 import org.openqa.selenium.PageLoadStrategy;
@@ -23,6 +24,7 @@ public class LoginTest {
         new LoginPage(driver).EnterEmail("salma@123").EnterPassword("122333"); //flaunt pattern
         new LoginPage(driver).ClickOnLogin();
         new LoginPage(driver).AssertSuccessfulLogin();
+        new LoginPage(driver).AssertSuccessfulLogin();
     }
 
     @Test(priority = 2)
@@ -37,10 +39,8 @@ public class LoginTest {
     //Configurations
     @BeforeClass
     public void SetUp(){
-        EdgeOptions options = new EdgeOptions();
-        options.addArguments("Start-maximized");
-        options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-        driver = new EdgeDriver();
+        //driver = DriverManager.createInstance("edge");
+        driver = DriverManager.createInstance("chrome");
         //driver = new ChromeDriver();
         new LoginPage(driver).NavigateToLoginPage();    //anonymous object
 
