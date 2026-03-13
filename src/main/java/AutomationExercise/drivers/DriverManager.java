@@ -1,5 +1,6 @@
 package AutomationExercise.drivers;
 
+import AutomationExercise.utils.LogsUtil;
 import org.openqa.selenium.WebDriver;
 
 import static org.testng.AssertJUnit.fail;
@@ -14,12 +15,14 @@ public class DriverManager {
 
     public static WebDriver createInstance(String BrowserName){
         WebDriver driver = BrowserFactory.getBrowser(BrowserName);
+        LogsUtil.info("Driver created on: ",BrowserName);
         setDriver(driver);
         return getDriver();
     }
 
     public static WebDriver getDriver(){
         if (driverThreadLocal.get() == null){
+            LogsUtil.error("Driver is null");
             fail("driver is null");
         }
         return driverThreadLocal.get();

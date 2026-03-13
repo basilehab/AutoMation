@@ -39,8 +39,8 @@ public class LoginTest {
     //Configurations
     @BeforeClass
     public void SetUp(){
-        //driver = DriverManager.createInstance("edge");
-        driver = DriverManager.createInstance("chrome");
+        driver = DriverManager.createInstance("edge");
+        //driver = DriverManager.createInstance("chrome");
         //driver = new ChromeDriver();
         new LoginPage(driver).NavigateToLoginPage();    //anonymous object
 
@@ -48,7 +48,7 @@ public class LoginTest {
 
     @AfterClass
     public void tearDown(){
-        driver.quit();
+        BrowserActions.quitTheBrowser(DriverManager.getDriver());
         //CustomSoftAssertion.CustomAssertAll();
     }
 
