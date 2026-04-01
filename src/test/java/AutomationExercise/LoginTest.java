@@ -16,7 +16,7 @@ public class LoginTest {
     //variables
     private WebDriver driver;
 
-
+    
 
     //Tests
     @Test(priority = 1)

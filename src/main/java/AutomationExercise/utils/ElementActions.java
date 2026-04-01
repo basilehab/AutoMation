@@ -1,5 +1,6 @@
 package AutomationExercise.utils;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,6 +11,7 @@ public class ElementActions {
     }
 
     //sendkeys
+    @Step("Sending data: {data} to the element: {locator}")
     public static void SendData(WebDriver driver, By locator, String data){
         Waits.WaitForElementToBeVisible(driver,locator);
         Scroll.ScrollToElement(driver,locator);
@@ -18,6 +20,7 @@ public class ElementActions {
     }
 
     //click
+    @Step("Clicking the element: {locator}")
     public static void ClickElement(WebDriver driver, By locator){
         Waits.WaitForElementToBeClickable(driver,locator);
         Scroll.ScrollToElement(driver,locator);
@@ -37,6 +40,7 @@ public class ElementActions {
         driver.findElement(locator).click();
     }
 
+    @Step("Get text from the element: {locator}")
     public static String GetText(WebDriver driver, By locator){
         Waits.WaitForElementToBeVisible(driver, locator);
         Scroll.ScrollToElement(driver, locator);

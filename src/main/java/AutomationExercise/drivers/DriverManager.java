@@ -1,6 +1,7 @@
 package AutomationExercise.drivers;
 
 import AutomationExercise.utils.LogsUtil;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
 import static org.testng.AssertJUnit.fail;
@@ -13,6 +14,7 @@ public class DriverManager {
         super();
     }
 
+    @Step("Create driver instance on: {browserName}")
     public static WebDriver createInstance(String BrowserName){
         WebDriver driver = BrowserFactory.getBrowser(BrowserName);
         LogsUtil.info("Driver created on: ",BrowserName);
