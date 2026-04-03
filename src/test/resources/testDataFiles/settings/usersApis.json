@@ -1,0 +1,105 @@
+{
+  "owner": {
+    "name": "Ismail Owner_60%, Operations, Expenses:1",
+    "loginMethod": "email",
+    "email": "ismail.tester@moakt.cc",
+    "password": "Tester@2022",
+    "isDoctor": true,
+    "doctorPercentage": 60,
+    "salary": 0,
+    "expensesFrom": "invoices",
+    "automaticExpenses": true,
+    "automaticPaid": false,
+    "job": "doctor",
+    "dentalNotation": "PALMER",
+    "phoneNumber": "+20_100500000",
+    "phoneNumber2": "",
+    "address": "address",
+    "branches": [
+      "8f66fd7e-a96d-4c1f-8b3c-c3598cb05300"
+    ],
+    "group": "Doctors",
+    "permissions": [],
+    "customFields": [],
+    "images": []
+  },
+  "doctor_1": {
+    "name": "Doctor_1 40%, Operation, Paid:1",
+    "loginMethod": "username",
+    "companyLoginName": "testclinic",
+    "username": "doctor1",
+    "password": "Tester@2022",
+    "isDoctor": true,
+    "doctorPercentage": 40,
+    "salary": 0,
+    "expensesFrom": "operations",
+    "automaticExpenses": false,
+    "automaticPaid": true,
+    "job": "doctor",
+    "dentalNotation": "PALMER",
+    "phoneNumber": "+20_100511111",
+    "phoneNumber2": "",
+    "address": "Test Address",
+    "branches": [
+      "8f66fd7e-a96d-4c1f-8b3c-c3598cb05300"
+    ],
+    "group": "Doctors",
+    "permissions": [],
+    "customFields": [],
+    "images": []
+  },
+  "doctor_2": {
+    "name": "Doctor_2 20%, Payment, Expenses=1, Paid=1",
+    "loginMethod": "username",
+    "companyLoginName": "testclinic",
+    "username": "doctor2",
+    "password": "Tester@2022",
+    "isDoctor": true,
+    "doctorPercentage": 20,
+    "salary": 0,
+    "expensesFrom": "payments",
+    "automaticExpenses": true,
+    "automaticPaid": true,
+    "job": "doctor",
+    "dentalNotation": "PALMER",
+    "phoneNumber": "+20_100522222",
+    "phoneNumber2": "",
+    "address": "address",
+    "branches": [
+      "8f66fd7e-a96d-4c1f-8b3c-c3598cb05300"
+    ],
+    "group": "Doctors",
+    "permissions": [],
+    "customFields": [],
+    "images": []
+  },
+  "doctor_3": {
+    "name": "Doctor_3 Salary, Payments",
+    "loginMethod": "username",
+    "companyLoginName": "testclinic",
+    "username": "doctor3",
+    "password": "Tester@2022",
+    "isDoctor": true,
+    "doctorPercentage": 0,
+    "salary": 10000,
+    "expensesFrom": "payments",
+    "automaticExpenses": false,
+    "automaticPaid": false,
+    "job": "doctor",
+    "dentalNotation": "PALMER",
+    "phoneNumber": "+20_100533333",
+    "phoneNumber2": "",
+    "address": "address",
+    "branches": [
+      "8f66fd7e-a96d-4c1f-8b3c-c3598cb05300"
+    ],
+    "group": "Doctors",
+    "permissions": [],
+    "customFields": [],
+    "images": []
+  },
+  "disableUser": {
+    "disabled": true
+  }
+
+}

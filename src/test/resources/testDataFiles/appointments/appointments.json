@@ -1,0 +1,51 @@
+{
+  "patient": "test ",
+  "addAppointment": {
+    "patient": {
+      "id": "1",
+      "firstName": "John Doe",
+      "lastName": "John Doe",
+      "email": "",
+      "phone": "01234567890",
+      "address": "123 Main St",
+      "city": "New York"
+    },
+    "appointment": {
+      "urgent": false,
+      "alert": false,
+      "note": false,
+      "doctor": "Doc1 40%, Operation, Paid=1",
+      "room": "Dr 2",
+      "status": "Open",
+      "startTime": "03:00 am",
+      "endEnd": "04:00 pm",
+      "datePicker": {
+        "day": "2023-07-14",
+        "start": {
+          "hour": "03",
+          "minute": "00",
+          "meridian": "AM"
+        },
+        "end": {
+          "hour": "04",
+          "minute": "00",
+          "meridian": "AM"
+        }
+      },
+      "day": "2023-07-14",
+      "details": "This is a note"
+    },
+    "diagnosticFees": {
+    },
+    "MobileNotification": {
+    },
+    "confirmationMsg": {
+      "appointmentSameTime": "Yes",
+      "sendSms": "Yes",
+      "invalidPhoneN": "Yes"
+    },
+    "expectedResult": {
+      "successMsg": "Appointment created successfully"
+    }
+  }
+}

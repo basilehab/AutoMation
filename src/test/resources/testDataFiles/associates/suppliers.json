@@ -1,0 +1,14 @@
+{
+  "supplier1": {
+    "name": "test supplier1 ",
+    "number": "+20_100511998",
+    "email": "supplier1@gmail.com",
+    "details": "Test Details supplier1"
+  },
+  "supplier2": {
+    "name": "test supplier2 ",
+    "number": "+20_100511998",
+    "email": "supplier2@gmail.com",
+    "details": "Test Details supplier2"
+  }
+}

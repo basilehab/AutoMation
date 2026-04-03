@@ -1,0 +1,18 @@
+{
+  "_ga" : {
+    "path" : "/",
+    "domain" : ".dentope.com",
+    "name" : "_ga",
+    "isSecure" : false,
+    "expiry" : 1782154618000,
+    "value" : "GA1.1.1605520767.1747594618"
+  },
+  "_ga_T6H9L6B85S" : {
+    "path" : "/",
+    "domain" : ".dentope.com",
+    "name" : "_ga_T6H9L6B85S",
+    "isSecure" : false,
+    "expiry" : 1782154620000,
+    "value" : "GS2.1.s1747594618$o1$g1$t1747594620$j0$l0$h0"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "insuranceCompany": {
+    "create": "",
+    "update": "",
+    "delete": ""
+  },
+  "labs": {
+    "create": "",
+    "update": "",
+    "delete": ""
+  },
+  "suppliers": {
+    "create": "",
+    "update": "",
+    "delete": ""
+  },
+  "branchInventory": {
+    "create": "",
+    "update": "",
+    "delete": ""
+  },
+  "masterInventory": {
+    "create": "",
+    "update": "",
+    "delete": ""
+  },
+  "appointments": {
+    "create": "",
+    "update": "",
+    "delete": ""
+  },
+  "labOrders": {
+    "create": "",
+    "update": "",
+    "delete": ""
+  },
+  "notes": {
+    "create": "",
+    "update": "",
+    "delete": ""
+  },
+  "operations": {
+    "create": "",
+    "update": "",
+    "delete": ""
+  },
+  "patients": {
+    "create": "",
+    "update": "",
+    "delete": ""
+  },
+  "prescriptions": {
+    "create": "",
+    "update": "",
+    "delete": ""
+  },
+  "automaticTasks": {
+    "create": "",
+    "update": "",
+    "delete": ""
+  },
+  "branch": {
+    "create": "",
+    "update": "",
+    "delete": ""
+  },
+  "freeForm": {
+    "create": "",
+    "update": "",
+    "delete": ""
+  },
+  "medications": {
+    "create": "",
+    "update": "",
+    "delete": ""
+  },
+  "monthlyExpenses": {
+    "create": "",
+    "update": "",
+    "delete": ""
+  },
+  "patientReminders": {
+    "create": "",
+    "update": "",
+    "delete": ""
+  },
+  "prescriptionTemplates": {
+    "create": "",
+    "update": "",
+    "delete": ""
+  },
+  "sms": {
+    "create": "",
+    "update": "",
+    "delete": ""
+  },
+  "users": {
+    "create": "",
+    "update": "",
+    "delete": ""
+  }
+}

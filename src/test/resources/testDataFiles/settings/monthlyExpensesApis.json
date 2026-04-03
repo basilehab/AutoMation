@@ -1,0 +1,33 @@
+{
+  "search": "",
+  "internetBill0": {
+    "name": "internet Bill",
+    "type": "MONTHLY_EXPENSES",
+    "amount": 1000,
+    "user": "Ismail Owner_60%, Invoices, Expenses=1",
+    "branch": "Branch_1",
+    "automatic": true,
+    "details": "Test Details internet Bill"
+  },
+  "Taxes1": {
+    "name": "Taxes",
+    "type": "TAXES",
+    "amount": 1000,
+    "user": "Doctor_1 40%, Operation, Paid=1",
+    "branch": "branch_2",
+    "automatic": false,
+    "details": "Test Details Taxes"
+  },
+  "Rent2": {
+    "name": "Rent",
+    "type": "RENT",
+    "amount": 1000,
+    "user": "Doctor_2 20%, Payment, Expenses=1, Paid=1",
+    "branch": "branch_3",
+    "automatic": true,
+    "details": "Test Details Taxes"
+  },
+  "disableMonthlyExpense": {
+    "disabled": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "update_price_1": [
+    {
+      "price": 3000,
+      "amount": 1
+    },
+    {
+      "price": 2000,
+      "amount": 2
+    }
+  ]
+}

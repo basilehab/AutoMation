@@ -1,0 +1,46 @@
+{
+  "create_1": {
+    "doctor": "Doctor_1",
+    "branch": "Branch_1",
+    "patient": "Betsey Kautzer",
+    "code": "r1",
+    "name": "Composite filling (minimal)",
+    "procedure": "Composite filling (minimal)",
+    "tooth": [
+      1
+    ],
+    "status": "PLANNED",
+    "cost": 167,
+    "price": 15000,
+    "toothPart": [],
+    "child": false,
+    "details": "",
+    "chart": "DENTAL",
+    "createItems": true,
+    "productPriceId": null,
+    "insuranceDiscount": true,
+    "insuranceValue": null
+  },
+  "create_2": {
+    "doctor": "Doctor_1",
+    "branch": "Branch_1",
+    "patient": "Betsey Kautzer",
+    "code": "r1",
+    "name": "Composite filling (minimal)",
+    "procedure": "Composite filling (minimal)",
+    "tooth": [
+      2
+    ],
+    "status": "PLANNED",
+    "cost": 167,
+    "price": 15000,
+    "toothPart": [],
+    "child": false,
+    "details": "",
+    "chart": "DENTAL",
+    "createItems": true,
+    "productPriceId": null,
+    "insuranceDiscount": true,
+    "insuranceValue": null
+  }
+}

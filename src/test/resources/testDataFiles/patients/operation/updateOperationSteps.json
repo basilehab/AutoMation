@@ -1,0 +1,13 @@
+{
+  "update_steps_1": {
+    "branch": "Branch_1",
+    "doctor": "Doctor_1",
+    "forOperator": 1200.5,
+    "forLab": 800.0,
+    "details": "Updated operation details",
+    "createdAt": "2025-09-05T08:00:00Z",
+    "start": "2025-09-05T09:00:00Z",
+    "end": "2025-09-05T10:00:00Z",
+    "status": "COMPLETED"
+  }
+}

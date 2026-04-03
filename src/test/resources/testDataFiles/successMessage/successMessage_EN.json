@@ -1,0 +1,102 @@
+{
+  "insuranceCompany": {
+    "create": "Insurance Company Created Successfully",
+    "update": "Updated successfully",
+    "delete": "Insurance Company Deleted"
+  },
+  "labs": {
+    "create": "Created Successfully!",
+    "update": "Updated successfully",
+    "delete": "Deleted Successfully"
+  },
+  "suppliers": {
+    "create": "Created Successfully!",
+    "update": "Updated successfully",
+    "delete": "Deleted Successfully"
+  },
+  "branchInventory": {
+    "create": "",
+    "update": "",
+    "delete": ""
+  },
+  "masterInventory": {
+    "create": "",
+    "update": "",
+    "delete": ""
+  },
+  "appointments": {
+    "create": "Appointment created successfully",
+    "update": "Appointment updated successfully",
+    "delete": "Appointment Deleted successfully"
+  },
+  "labOrders": {
+    "create": "Created Successfully!",
+    "update": "Updated Successfully",
+    "delete": "Deleted Successfully"
+  },
+  "notes": {
+    "create": "Created Successfully!",
+    "update": "Updated successfully",
+    "delete": "Deleted Successfully"
+  },
+  "operations": {
+    "create": "Operation created successfully!",
+    "update": "Updated successfully",
+    "delete": "Deleted Successfully"
+  },
+  "patients": {
+    "create": "Patient Created Successfully",
+    "update": "Updated successfully",
+    "delete": "Patient Archived"
+  },
+  "prescriptions": {
+    "create": "Prescription created successfully!",
+    "update": "Updated successfully",
+    "delete": "Deleted Successfully"
+  },
+  "automaticTasks": {
+    "create": "Created Successfully!",
+    "update": "Updated successfully",
+    "delete": "Deleted Successfully"
+  },
+  "branch": {
+    "create": "Created Successfully!",
+    "update": "Updated successfully",
+    "delete": "Branch Disabled"
+  },
+  "freeForm": {
+    "create": "Created Successfully!",
+    "update": "Updated successfully",
+    "delete": "Deleted Successfully"
+  },
+  "medications": {
+    "create": "Medication created successfully",
+    "update": "Updated successfully",
+    "delete": "Medication Deleted!"
+  },
+  "monthlyExpenses": {
+    "create": "Created Successfully!",
+    "update": "Updated successfully",
+    "delete": "Deleted Successfully"
+  },
+  "patientReminders": {
+    "create": "Created Successfully!",
+    "update": "Updated successfully",
+    "delete": "Deleted Successfully"
+  },
+  "prescriptionTemplates": {
+    "create": "Prescription created successfully",
+    "update": "Updated successfully",
+    "delete": "Deleted Successfully"
+  },
+  "sms": {
+    "create": "SMS created successfully",
+    "update": "Updated successfully",
+    "delete": "SMS Deleted!"
+  },
+  "users": {
+    "create": "Created Successfully!",
+    "update": "Updated Successfully",
+    "delete": "User Disabled"
+  }
+}

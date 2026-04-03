@@ -1,0 +1,19 @@
+{
+  "update_1": {
+    "doctor": "Doctor_1",
+    "branch": "Branch_1",
+    "appointment": "",
+    "details": "",
+    "cost": 100.0,
+    "forOperator": 1000,
+    "tooth": [
+      1
+    ],
+    "status": "PLANNED",
+    "createdAt": "",
+    "child": false,
+    "expires": "",
+    "start": "",
+    "end": ""
+  }
+}

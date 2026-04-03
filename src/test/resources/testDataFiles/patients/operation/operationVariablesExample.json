@@ -1,0 +1,32 @@
+{
+  "generatedID": "guid",
+  "status": "enum",
+  "tooth": [
+    0
+  ],
+  "patient": "id",
+  "doctor": "id",
+  "branch": "id",
+  "child": "boolean",
+  "name": "string",
+  "code": "string",
+  "price": 0.0,
+  "cost": 0.0,
+  "procedure": "string",
+  "condition": "string",
+  "toothPart": [
+    "string"
+  ],
+  "appointment": "string",
+  "priceList": "string",
+  "insuranceDiscount": "boolean",
+  "insuranceValue": "int",
+  "details": "string",
+  "productPriceId": "string",
+  "sms": "boolean",
+  "createItems": "boolean",
+  "counter": "id",
+  "globalCondition": "id",
+  "manualPrice": "boolean",
+  "chart": "enum"
+}

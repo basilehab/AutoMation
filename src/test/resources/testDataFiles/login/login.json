@@ -1,0 +1,13 @@
+{
+  "owner": {
+    "email": "automationtesting@dentolize.com",
+    "password": "Tester@2022"
+  },
+  "dr1": {
+    "clinicLoginName": "testclinic_2",
+    "userName": "",
+    "password": "Tester@2022"
+  },
+  "branchName": "Branch_1",
+  "expectedResult_LoginProcess": "Dashboard"
+}

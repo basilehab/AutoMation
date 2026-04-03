@@ -1,0 +1,46 @@
+{
+  "procedureGroup1": {
+    "name": "ProcedureGroup_1",
+    "code": "n1",
+    "image": "anast",
+    "order": 13
+  },
+  "procedures": [
+    {
+      "code": "t1",
+      "name": "Procedure_1",
+      "value": 1000,
+      "toothEffect": "hyg",
+      "insuranceDiscount": true,
+      "openLab": true,
+      "ageGroup": "ALL",
+      "cost": 500,
+      "priceId": "",
+      "id": 1,
+      "order": 0,
+      "groupId": "4975b1c4-bbb6-49c6-b68e-34f8229cf560"
+    }
+  ],
+  "procedureGroup2": {
+    "name": "ProcedureGroup_2",
+    "code": "n2",
+    "image": "anast",
+    "order": 13
+  },
+  "procedures": [
+    {
+      "code": "t2",
+      "name": "Procedure_2",
+      "value": 1000,
+      "toothEffect": "hyg",
+      "insuranceDiscount": true,
+      "openLab": true,
+      "ageGroup": "ALL",
+      "cost": 500,
+      "priceId": "",
+      "id": 1,
+      "order": 0,
+      "groupId": "cbad8ec4-7d9d-4721-92f2-7b6ba14be28b"
+    }
+  ]
+}

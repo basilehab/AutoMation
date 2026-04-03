@@ -1,0 +1,28 @@
+{
+  "createRequiredData": {
+    "branch": "branchId",
+    "patient:": "patientId",
+    "doctor": "drId",
+    "room": "String",
+    "status": "String",
+    "day:": "date",
+    "start": "date",
+    "end": "date",
+    "appointmentType": "String"
+  },
+  "updateRequiredData": {
+    "appointment": "appointmentId",
+    "branch": "branchId",
+    "patient:": "patientId",
+    "doctor": "drId",
+    "room": "String",
+    "status": "String",
+    "day:": "date",
+    "start": "date",
+    "end": "date",
+    "appointmentType": "String"
+  },
+  "AppointmentVariables": {
+
+  }
+}

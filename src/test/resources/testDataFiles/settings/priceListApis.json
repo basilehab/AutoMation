@@ -1,0 +1,36 @@
+{
+  "priceList1": {
+    "name": "Price List_1 (-1000, Sync Default, R:1,E:0)",
+    "branches": ["8f66fd7e-a96d-4c1f-8b3c-c3598cb05300","f781b396-993f-4def-a714-5c999d76cd15"],
+    "syncTo": "default",
+    "keepInSync": true,
+    "whichWay": "difference",
+    "difference": -1000
+  },
+  "priceList2": {
+    "name": "Price List_2 (125% , Sync Default, R:1,E:0)",
+    "branches": ["f781b396-993f-4def-a714-5c999d76cd15"],
+    "syncTo": "default",
+    "keepInSync": false,
+    "whichWay": "percentage",
+    "percentage": 125
+  },
+  "priceList3": {
+    "name": "Price List_3 (-1000, Copy Default, R=0,E=1)",
+    "branches": [],
+    "syncTo": null,
+    "keepInSync": false,
+    "whichWay": "",
+    "percentage": 0,
+    "difference": 0
+  },
+  "priceList4": {
+    "name": "Price List_4 + Insurance_1 (R= 0/E=1)",
+    "branches": [],
+    "syncTo": null,
+    "keepInSync": false,
+    "whichWay": "",
+    "percentage": 0,
+    "difference": 0
+  }
+}

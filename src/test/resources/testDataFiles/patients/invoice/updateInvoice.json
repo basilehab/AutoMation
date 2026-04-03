@@ -1,0 +1,38 @@
+{
+  "create_1": {
+    "pendingPaymentPercent": 20.0,
+    "operations": [
+      "op-001",
+      "op-002"
+    ],
+    "patient": "John Doe",
+    "branch": "Branch_1",
+    "doctor": "Doctor_1",
+    "lineItems": [
+      {
+        "operation": "op-001",
+        "price": 3000,
+        "amount": 1
+      },
+      {
+        "operation": "op-002",
+        "price": 2000,
+        "amount": 2
+      }
+    ],
+    "users": [
+    ],
+    "markAppointmentsCompleted": true,
+    "createdAt": "",
+    "sms": true,
+    "invoiceId": "INV-2025-001",
+    "details": "Insurance invoice",
+    "referenceId": 789,
+    "treasury": "",
+    "appointment": "",
+    "patientPartAlertShown": false,
+    "preAuth": "",
+    "patientTaxPercent":0,
+    "insuranceTaxPercent":0
+  }
+}

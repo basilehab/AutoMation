@@ -1,0 +1,26 @@
+{
+  "insurance1": {
+    "name": "Insurance_1 (-50%, Unlimited)",
+    "number": "",
+    "insurancePercentage": 50,
+    "insuranceLimit": 0,
+    "insuranceUnlimited": true,
+    "approvalRequired": false
+  },
+  "insurance2": {
+    "name": "Insurance_2 (-50% ,limit=1K)",
+    "number": "",
+    "insurancePercentage": 50,
+    "insuranceLimit": 1000,
+    "insuranceUnlimited": false,
+    "approvalRequired": false
+  },
+  "insurance3": {
+    "name": "Insurance_3 (-100%, Unlimited, *Approval)",
+    "number": "",
+    "insurancePercentage": 100,
+    "insuranceLimit": 0,
+    "insuranceUnlimited": true,
+    "approvalRequired": true
+  }
+}
