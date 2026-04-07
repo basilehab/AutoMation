@@ -5,6 +5,8 @@ import org.apache.logging.log4j.Logger;
 
 public class LogsUtil {
 
+    public static final String Logs_Path = "test-outputs/Logs";
+
     private LogsUtil(){
         super();
     }
